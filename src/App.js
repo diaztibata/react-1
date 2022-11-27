@@ -1,16 +1,16 @@
-import './App.css';
+import React from 'react';
+import { TodoLista } from  './TodoLista';
+import { TodoCounter } from './TodoCounter';
+import { TodoSearch } from './TodoSearch'
 
-const todos = [
-  { text: 'Cortar cebolla', completed: true },
-  { text: 'Tomar el cursso de intro a React', completed: false },
-  { text: 'Llorar con la llorona', completed: false },
-  { text: 'LALALALAA', completed: false },
-];
-
-function App(props) {
+function App() {
   return (
-    <h1>tio</h1>
+    <React.Fragment>
+      <TodoCounter />
+      <TodoSearch />
+      <TodoLista />
+    </React.Fragment>    
   );
 }
 
-export {App};
+export default App;
